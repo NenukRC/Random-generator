@@ -14,6 +14,9 @@
     height: 50%;
     width: 100%;
     background-color: rgb(255, 79, 79);
+    display: flex;
+    flex-direction: column;
+   align-items: center;
 }
 .bottom{
     height: 50%;
@@ -84,4 +87,8 @@ button {
     color: #03045e;
     font-size: 18px;
     transition: all 0.3s ease-in;
+   }
+   .main p{
+   font-size: 55px; 
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
