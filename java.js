@@ -3,11 +3,5 @@ function generateRandomNumber() {
   const max = 1000;
   const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
-  document.getElementById(
-    "result"
-  ).textContent = `Random Number: ${randomNumber}`;
+  document.getElementById("result").textContent = `Random Number: ${randomNumber}`;
 }
-
-document
-  .getElementById("generateButton")
-  .addEventListener("click", generateRandomNumber);
