@@ -1,7 +1,17 @@
-function generateRandomNumber() {
-  const min = 1;
-  const max = 1000;
-  const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+let quote = document.getElementById("quote");
+let author = document.getElementById("author");
+let btn = document.getElementById("btn");
 
-  document.getElementById("result").textContent = `Random Number: ${randomNumber}`;
-}
+const url = "https://api.quotable.io/random";
+
+let getQuote = () => {
+  fetch(url)
+    .then((data) => data.json())
+    .then((item) => {
+      quote.innerText = item.content;
+      author.innerText = item.author;
+    });
+};
+
+window.addEventListener("load", getQuote);
+btn.addEventListener("click", getQuote);
