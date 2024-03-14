@@ -84,7 +84,7 @@ button {
    
    button::after {
     right: -10px;
-    background: rgb(255, 230, 0);
+    background: rgb(255, 32, 203);
    }
    
    button:hover::before,
