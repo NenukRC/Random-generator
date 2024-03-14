@@ -12,11 +12,15 @@
             padding: 0;
             background-color: #f8f8f8;
         }
-        header {
+        .header {
             background-color: #ff0000;
             color: #fff;
             padding: 20px;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
         main {
             padding: 20px;
@@ -35,12 +39,70 @@
           justify-content: center;
           align-items: center;
         }
+        .dropdown {
+          
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: -12px -16px;
+          z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        .Useless{
+          height: 100%;
+          width: 56%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .useless2{
+          width: 34%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1 style="font-size: 50px;">Useless Website</h1>
-    </header>
+    <div class="header">
+        
+        <div class="useless2">
+          <div class="dropdown">
+            <span style="font-size: 30px;">Menu</span>
+            <div class="dropdown-content">
+              <a href="">
+                <p>Random Number generator</p>
+              </a>
+              <a href="">
+                <p>Random Letter generator</p>
+              </a>
+              <a href="">
+                <p>Random Quote generator</p>
+              </a>
+              <a href="">
+                <p>Random Card generator</p>
+              </a>
+              <a href="">
+                <p>About</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="Useless">
+          <h1 style="font-size: 50px;">Useless Website</h1>
+        </div>
+      
+    </div>
     <main>
       <div class="box">
         <a href="">
