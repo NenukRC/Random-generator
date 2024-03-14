@@ -40,12 +40,78 @@
             width: 50%;
             height: 100%;
             background-color: rgb(240, 240, 240);
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+        button {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #0163E0;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: #0163E0;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+button svg {
+  fill: #0163E0;
+  height: 25px;
+  width: 25px;
+}
+
+button span {
+  margin: 10px;
+}
+
+button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+button:hover {
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+button:hover svg {
+  fill: currentColor;
+}
+
+button:hover::before {
+  box-shadow: inset 0 0 0 10em #0163E0;
+}
         .ching{
             width: 50%;
             height: 100%;
-            background-color: rgb(240, 240, 240);
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
     </style>
 </head>
@@ -53,10 +119,29 @@
     <div class="header">
         <font style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 70px">About us</font>
     </div>
+    <hr>
     <div class="main">
-            <div class="leng"></div>
-            <div class="ching"></div>
+            <div class="leng">
+                <img src="./lengeregiig tuluulugch.jpg" alt="" style="width: 45%; height: 30%; border-radius: 10px;">
+                <font style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(0, 0, 0); font-size: 50px">Дамбадорж Ангарагнаран</font>
+                <button>
+                    <svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"></path> </g></svg>
+                      <span>Facebook</span>
+                  </button>
+                  
+                  
+            </div>
+            <hr>
+            <div class="ching">
+                <img src="./m5 cs.jpg" alt="" style="width: 45%; height: 30%; border-radius: 10px;">
+                <font style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(0, 0, 0); font-size: 50px">Эрдэнэ-Очир Чингүүн</font>
+                <button>
+                    <svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"></path> </g></svg>
+                      <span>Facebook</span>
+                  </button>
+            </div>
     </div>
+    <hr>
     <div class="footer">
         
         <font style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 25px">&copy; 2024 Our Website. All rights reserved.</font>
