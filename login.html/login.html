@@ -7,35 +7,25 @@
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <div class="container">
-        <div class="wrapper">
-            <div class="card-switch">
-                <label class="switch">
-                <input type="checkbox" class="toggle">
-                <span class="slider"></span>
-                <span class="card-side"></span>
-                <div class="flip-card__inner">
-                    <div class="flip-card__front">
-                        <div class="title">Log in</div>
-                        <form class="flip-card__form" action="">
-                            <input class="flip-card__input" name="email" placeholder="Email" type="email">
-                            <input class="flip-card__input" name="password" placeholder="Password" type="password">
-                            <button class="flip-card__btn">Let`s go!</button>
-                        </form>
-                    </div>
-                    <div class="flip-card__back">
-                        <div class="title">Sign up</div>
-                        <form class="flip-card__form" action="">
-                            <input class="flip-card__input" placeholder="Name" type="name">
-                            <input class="flip-card__input" name="email" placeholder="Email" type="email">
-                            <input class="flip-card__input" name="password" placeholder="Password" type="password">
-                            <button class="flip-card__btn">Confirm!</button>
-                        </form>
-                    </div>
-                </div>
-                </label>
-            </div>   
+    <div class="bigcontainer">
+        <div class="login-page">
+            <div class="form">
+                <form class="login-form "  action="/main/index.html" target="_blank">
+                    <h2>SIGN IN TO YOUR ACCOUNT</h2>
+                    <input type="text" required placeholder="Username" id="user" autocomplete="off" />
+                    <input oninput="return formvalid()" type="password" required placeholder="Password" id="pass"
+                        autocomplete="off" />
+                    <img src="https://cdn2.iconfinder.com/data/icons/basic-ui-interface-v-2/32/hide-512.png"
+                        onclick="show()" id="showimg">
+                    <span id="vaild-pass"></span>
+                    
+                    <button type="submit">SIGN IN</button>
+                
+                    <p class="message"><a href="#">Forgot your password?</a></p>
+                </form>
+            </div>
         </div>
     </div>
+ <script src="./login.js"></script>
 </body>
 </html>
