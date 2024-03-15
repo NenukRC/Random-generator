@@ -11,23 +11,44 @@
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
+
+            --s: 200px; /* control the size */
+          --c1: #1d1d1d;
+          --c2: #4e4f51;
+          --c3: #3c3c3c;
+
+          background: repeating-conic-gradient(
+                from 30deg,
+                #0000 0 120deg,
+                var(--c3) 0 180deg
+              )
+              calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+            repeating-conic-gradient(
+              from 30deg,
+              var(--c1) 0 60deg,
+              var(--c2) 0 120deg,
+              var(--c3) 0 180deg
+            );
+          background-size: var(--s) calc(var(--s) * 0.577);
         }
         .header {
-            background-color: #ff0000;
+            background-color: #000000;
             color: #fff;
             padding: 20px;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
+            opacity: 80%;
 
         }
        
         footer {
-            background-color: #ff0000;
+            background-color: #000000;
             color: #fff;
             padding: 20px;
             text-align: center;
+            opacity: 80%;
         }
         .box{
           width: 100%;
@@ -35,11 +56,13 @@
           display: flex;
           justify-content: center;
           align-items: center;
+
+          
         }
         .dropdown {
-          
           position: relative;
           display: inline-block;
+          z-index: 1;
         }
 
         .dropdown-content {
@@ -49,11 +72,13 @@
           min-width: 160px;
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           padding: -12px -16px;
-          z-index: 1;
-        }
+          z-index: 10;
 
+        }
         .dropdown:hover .dropdown-content {
           display: block;
+          z-index: 10;
+
         }
         .Useless{
           height: 100%;
@@ -68,12 +93,40 @@
           display: flex;
           justify-content: flex-start;
         }
-        img{
+        .card{
           margin: 10px;
           border-radius: 50px;
-          background: #e0e0e0;
-          box-shadow: 20px 20px 60px #bebebe,
-               -20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #605b5b,
+               -20px -20px 60px #434343;
+          cursor: pointer;
+          transition: all 0.2s;
+          position: relative;
+          z-index: 1;
+        }
+
+        .card-inner {
+          width: inherit;
+          height: inherit;
+          background: rgba(255,255,255,.05);
+          box-shadow: 0 0 10px rgba(0,0,0,0.25);
+          backdrop-filter: blur(10px);
+          border-radius: 8px;
+        }
+
+        .card:hover {
+          transform: scale(1.04) rotate(1deg);
+        }
+
+        @keyframes move-up6 {
+          to {
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes move-down1 {
+          to {
+            transform: translateY(10px);
+          }
         }
     </style>
 </head>
@@ -110,16 +163,16 @@
     <main>
       <div class="box">
         <a href="/random number/number.html">
-          <img style="width: 95%;" src="./olivia wilson.png" alt="">
+          <img style="width: 95%;" src="./olivia wilson.png" alt="" class="card">
         </a>
         <a href="/random letter/letter.html">
-          <img style="width: 95%;" src="./olivia wilson (1).png" alt="">
+          <img style="width: 95%;" src="./olivia wilson (1).png" alt="" class="card">
         </a>
         <a href="/random quote/quote.html">
-          <img style="width: 95%;" src="./olivia wilson (2).png" alt="">
+          <img style="width: 95%;" src="./olivia wilson (2).png" alt="" class="card">
         </a>
         <a href="/random card/card.html">
-          <img style="width: 95%;" src="./olivia wilson (3).png" alt="">
+          <img style="width: 95%;" src="./olivia wilson (3).png" alt="" class="card">
         </a>
       </div>
     </main>
